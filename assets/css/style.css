@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/* criando classes e adicionando coisas ao documento, ao fazermos isso podemos adicionar coisas especificas para cada elemento*/
+
+/* transformando o conteudo da intro e uma grid para podermos dividila */
+.intro-content {
+    position: relative;
+    top: -8rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* dentro do conteúdo da primeira coluna transformamos em uma um conteudo flex para podermos alinhar como colunas */
+
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.intro-text-content h2 {
+    font-size: 6rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.intro-img img{
+    max-width: 100%;
+    height: auto;
+}
+
+.top3-content {
+    height: 100vh;
+}

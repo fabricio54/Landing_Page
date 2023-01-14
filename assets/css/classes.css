@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* classe para utilizar a imagem baixada */
+.main-bg {
+    background-image: url('../img/endless-constellation.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white)
+}
+
+.white-bg {
+    /* caso agente precisar uma cor de fundo */ 
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+/* o elemento que recebe a classe main content terá no máximo 1200px de largura e estará centralizado */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* utilizando uma variável para definir um padding padrão que pode ser modificado ao longo do projeto */ 
+    padding: var(--gap);
+}
+
+.section {
+    /* altura mínima da seção terá 100% da view port */
+    min-height: 100vh;
+}
+
+.menu-spacing{
+    height: 65px;
+}

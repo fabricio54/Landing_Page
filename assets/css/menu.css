@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.menu {
+    background-color: var(--white);
+    /* colocando position fixed ja perdemos as caracteristicas de bloco mais o menu fica fixo ao rolar a página */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--laght-gray);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+}
+
+.menu h1 a {
+    /* herda do elemento pai */
+    color: var(--primary-color);
+}
+
+.menu ul {
+    /* tirando os marcadores da lista */
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+    /* position relative */ 
+}
+
+.menu ul li a::after {
+    content: '';
+    /* vai ser relativo ao elemento pai */
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--secund-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
